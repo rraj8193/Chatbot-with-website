@@ -1,0 +1,63 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- order_food
+- inform
+- inform{'location':'pune'}
+- 'intent: inform'
+- 'intent: greet'
+- 'intent: order_food'
+- 'intent: goodbye'
+- about_location
+- affirm
+entities:
+- location
+- user_location
+- cuisine
+- about_location
+slots:
+  city_id:
+    type: unfeaturized
+    influence_conversation: false
+  cuisine:
+    type: unfeaturized
+    influence_conversation: false
+  latitude:
+    type: unfeaturized
+    influence_conversation: false
+  location:
+    type: unfeaturized
+    influence_conversation: false
+  location_id:
+    type: unfeaturized
+    influence_conversation: false
+  location_type:
+    type: unfeaturized
+    influence_conversation: false
+  longitude:
+    type: unfeaturized
+    influence_conversation: false
+  more_restaurants:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_how_canIhelp:
+  - text: Hey Foodie😋️!! I am here to help you in finding best cuisine for you.
+  - text: Hello! I am your foodbot🤖️ assisting you to find best cuisine of your taste.
+  utter_ask_location:
+  - text: Please provide me your location.
+  utter_ask_cuisine:
+  - text: What type of cuisine do you prefer?
+  utter_goodbye:
+  - text: GoodBye!! Its nice Talking to you
+actions:
+- utter_how_canIhelp
+- utter_ask_location
+- utter_ask_cuisine
+- action_greet
+- action_search_restaurant
+- action_more_restaurant
+- utter_goodbye

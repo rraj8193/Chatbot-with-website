@@ -1,0 +1,350 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID c2cedd4991b140ab913ac11b4244651b
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: order_food
+  - action: utter_ask_location
+  - intent: inform
+    entities:
+    - location: Delhi
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_cuisine
+  - intent: inform
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: action_search_restaurant
+  - slot_was_set:
+    - more_restaurants:
+      - id: '18727383'
+        name: Sly Granny
+        url: https://www.zomato.com/ncr/sly-granny-khan-market-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12noon – 11:30pm (Mon-Fri),9am – 11:30am, 12noon – 11:30pm (Sat-Sun)
+        votes: 1000
+        image: https://b.zmtcdn.com/data/pictures/3/18727383/83b691d1e47390a57ed2073ff0ca8601.jpg
+        cuisines: Continental, Italian, Salad, American, Beverages
+        ratings: '4.2'
+        rating_color: 5BA829
+        price_range: 3
+        cost: 1800
+        location: Khan Market, New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '18601016'
+        name: Raise The Bar Rooftop - Clarens Hotel
+        url: https://www.zomato.com/ncr/raise-the-bar-rooftop-clarens-hotel-sector-29-gurgaon?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 6 PM to 1 AM
+        votes: 813
+        image: https://b.zmtcdn.com/data/pictures/6/18601016/dcba2e51a44d9dcc08ddee2fecfee2c0.jpg
+        cuisines: European, Continental, Italian
+        ratings: '4.5'
+        rating_color: 3F7E00
+        price_range: 4
+        cost: 2800
+        location: Clarens Hotel, Sector 29, Gurgaon, Gurgaon
+        currency: Rs.
+        user_rating_text: Excellent
+      - id: '2749'
+        name: Ottimo At West View - ITC Maurya
+        url: https://www.zomato.com/ncr/ottimo-at-west-view-itc-maurya-chanakyapuri-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 7 PM to 11:45 PM
+        votes: 395
+        image: https://b.zmtcdn.com/data/res_imagery/2749_RESTAURANT_92f3fe2c948757da5aef1a97c02b2eac.jpg
+        cuisines: European, Italian
+        ratings: '4.4'
+        rating_color: 5BA829
+        price_range: 4
+        cost: 6600
+        location: ITC Maurya, Chanakyapuri, New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '18413250'
+        name: Fig & Maple
+        url: https://www.zomato.com/ncr/fig-maple-greater-kailash-gk-2-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 11:30am – 4pm, 7pm – 12midnight (Mon-Fri),11:30am – 12midnight (Sat-Sun)
+        votes: 740
+        image: https://b.zmtcdn.com/data/reviews_photos/673/f63d17ab5725f60ac3eeb59527d4f673_1578324653.jpg
+        cuisines: Continental, Italian
+        ratings: '4.0'
+        rating_color: 5BA829
+        price_range: 4
+        cost: 2600
+        location: Greater Kailash 2 (GK2), New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '18715352'
+        name: Ladera
+        url: https://www.zomato.com/ncr/ladera-sector-29-gurgaon?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 6pm – 11pm (Mon-Sun)
+        votes: 250
+        image: https://b.zmtcdn.com/data/pictures/2/18715352/b089e7c3dee1913a0d7606f8024c6113.jpg
+        cuisines: Continental, Mediterranean, European, Italian
+        ratings: '4.1'
+        rating_color: 5BA829
+        price_range: 4
+        cost: 3800
+        location: Sector 29, Gurgaon
+        currency: Rs.
+        user_rating_text: Very Good
+- story: Story from Conversation ID d4c9409969464c0a8a753e5f40d7b8a6
+  steps:
+  - intent: order_food
+  - action: utter_ask_location
+  - intent: inform
+    entities:
+    - location: Delhi
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_cuisine
+  - intent: inform
+    entities:
+    - cuisine: Thai
+  - slot_was_set:
+    - cuisine: Thai
+  - action: action_search_restaurant
+  - slot_was_set:
+    - more_restaurants:
+      - id: '2632'
+        name: Mamagoto
+        url: https://www.zomato.com/ncr/mamagoto-khan-market-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12noon – 11:30pm (Mon-Sun)
+        votes: 4417
+        image: https://b.zmtcdn.com/data/pictures/2/2632/9320ee578eac2ba58278719f2e204ec0.jpg
+        cuisines: Chinese, Sushi, Thai, Asian
+        ratings: '4.2'
+        rating_color: 5BA829
+        price_range: 3
+        cost: 1500
+        location: Khan Market, New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '947'
+        name: Mamagoto
+        url: https://www.zomato.com/ncr/mamagoto-saket-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12noon – 11:30pm (Mon-Sun)
+        votes: 4761
+        image: https://b.zmtcdn.com/data/pictures/2/2632/9320ee578eac2ba58278719f2e204ec0.jpg
+        cuisines: Chinese, Sushi, Thai, Asian
+        ratings: '4.1'
+        rating_color: 5BA829
+        price_range: 3
+        cost: 1500
+        location: Select Citywalk Mall, Saket, New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '304033'
+        name: Big Wong
+        url: https://www.zomato.com/ncr/big-wong-sector-50-gurgaon?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 11:30 AM to 11 PM (Mon-Thu), 11:30 AM to 12 Midnight (Fri-Sun)
+        votes: 15365
+        image: https://b.zmtcdn.com/data/pictures/9/19161799/a1974525f70ff2afbf8b9d71c2337fc0.jpg
+        cuisines: Chinese, Sushi, Thai, Asian, Poké
+        ratings: '4.0'
+        rating_color: 5BA829
+        price_range: 3
+        cost: 1000
+        location: Baani Square, Sector 50, Gurgaon
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '1922'
+        name: Culinaire
+        url: https://www.zomato.com/ncr/culinaire-greater-kailash-gk-2-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: Mon-Sun (12:30 PM to 11 PM)
+        votes: 9918
+        image: https://b.zmtcdn.com/data/pictures/2/1922/97a99fd8f1f9114d8213e05ee72da0cc.jpg
+        cuisines: Asian, Chinese, Thai, Seafood
+        ratings: '4.1'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 800
+        location: Greater Kailash 2 (GK2), New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '308178'
+        name: Berco's
+        url: https://www.zomato.com/ncr/bercos-greater-kailash-gk-1-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12 Noon to 12 Midnight
+        votes: 15008
+        image: https://b.zmtcdn.com/data/pictures/5/55/4013ca11b3aa0ad89d4c2a0736564866.jpg
+        cuisines: Chinese, Thai, Asian
+        ratings: '4.2'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 700
+        location: M Block Market, Greater Kailash 1 (GK1), New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID a934ed4981e04944b296d3e2f9cc2811
+  steps:
+  - intent: greet
+  - action: action_greet
+  - intent: inform
+    entities:
+    - cuisine: Thai
+    - location: pune
+  - slot_was_set:
+    - cuisine: Thai
+  - slot_was_set:
+    - location: pune
+  - action: action_search_restaurant
+  - slot_was_set:
+    - more_restaurants:
+      - id: '6503301'
+        name: Oriental Connexions
+        url: https://www.zomato.com/pune/oriental-connexions-pune-university?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12:30pm – 3:30pm, 7pm – 11:30pm (Mon-Thu),12:30pm – 3:30pm, 7:30pm – 11:30pm (Fri-Sun)
+        votes: 1032
+        image: https://b.zmtcdn.com/data/pictures/chains/1/6503301/10654e4a30f6cff2295ad2daf7aabbe5.jpg
+        cuisines: Chinese, Malaysian, Thai, Seafood
+        ratings: '4.5'
+        rating_color: 3F7E00
+        price_range: 3
+        cost: 1200
+        location: The E-Square Hotel, Shivaji Nagar, Pune
+        currency: Rs.
+        user_rating_text: Excellent
+      - id: '6504426'
+        name: Kimling Rush
+        url: https://www.zomato.com/pune/kimling-rush-pimple-saudagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12noon – 3:30pm, 6:30pm – 11pm (Mon-Thu),12noon – 11pm (Fri-Sun)
+        votes: 6971
+        image: https://b.zmtcdn.com/data/res_imagery/6504426_RESTAURANT_ac2b69f7e9160b0fe68773bf495266cb.jpg
+        cuisines: Chinese, Thai
+        ratings: '4.1'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 750
+        location: Pimple Saudagar, Pune
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '18573401'
+        name: Soy Affair
+        url: https://www.zomato.com/pune/soy-affair-aundh?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12noon – 3:30pm, 7pm – 11pm (Mon-Sun)
+        votes: 2333
+        image: https://b.zmtcdn.com/data/pictures/1/18573401/bada943a315d43ab8913e66b67499324.jpg
+        cuisines: Asian, Thai, Chinese
+        ratings: '4.3'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 600
+        location: Aundh, Pune
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '6508074'
+        name: The Quick Wok
+        url: https://www.zomato.com/pune/the-quick-wok-hinjawadi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 11 AM to 11 PM (Mon-Sun)
+        votes: 4750
+        image: https://b.zmtcdn.com/data/pictures/chains/4/6508074/316a43ddedbd0211fa2365a7fa55bf77.jpg
+        cuisines: Chinese, Thai
+        ratings: '4.2'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 650
+        location: Hinjawadi, Pune
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '6504184'
+        name: Golden Chopsticx
+        url: https://www.zomato.com/pune/golden-chopsticx-pimple-saudagar?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 11am – 10pm (Mon-Sun)
+        votes: 10903
+        image: https://b.zmtcdn.com/data/res_imagery/6504184_RESTAURANT_c6fbf338ba206569fbcb447381b1c7f9.jpg
+        cuisines: Chinese, Thai
+        ratings: '4.0'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 650
+        location: Pimple Saudagar, Pune
+        currency: Rs.
+        user_rating_text: Very Good
+- story: Story from Conversation ID 51d63aaa1fec4f60a1cfae5e8e84fbf7
+  steps:
+  - intent: inform
+    entities:
+    - cuisine: Thai
+    - location: Delhi
+  - slot_was_set:
+    - cuisine: Thai
+  - slot_was_set:
+    - location: Delhi
+  - action: action_search_restaurant
+  - slot_was_set:
+    - more_restaurants:
+      - id: '2632'
+        name: Mamagoto
+        url: https://www.zomato.com/ncr/mamagoto-khan-market-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12noon – 11:30pm (Mon-Sun)
+        votes: 4417
+        image: https://b.zmtcdn.com/data/pictures/2/2632/9320ee578eac2ba58278719f2e204ec0.jpg
+        cuisines: Chinese, Sushi, Thai, Asian
+        ratings: '4.2'
+        rating_color: 5BA829
+        price_range: 3
+        cost: 1500
+        location: Khan Market, New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '947'
+        name: Mamagoto
+        url: https://www.zomato.com/ncr/mamagoto-saket-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12noon – 11:30pm (Mon-Sun)
+        votes: 4761
+        image: https://b.zmtcdn.com/data/pictures/2/2632/9320ee578eac2ba58278719f2e204ec0.jpg
+        cuisines: Chinese, Sushi, Thai, Asian
+        ratings: '4.1'
+        rating_color: 5BA829
+        price_range: 3
+        cost: 1500
+        location: Select Citywalk Mall, Saket, New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '304033'
+        name: Big Wong
+        url: https://www.zomato.com/ncr/big-wong-sector-50-gurgaon?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 11:30 AM to 11 PM (Mon-Thu), 11:30 AM to 12 Midnight (Fri-Sun)
+        votes: 15365
+        image: https://b.zmtcdn.com/data/pictures/9/19161799/a1974525f70ff2afbf8b9d71c2337fc0.jpg
+        cuisines: Chinese, Sushi, Thai, Asian, Poké
+        ratings: '4.0'
+        rating_color: 5BA829
+        price_range: 3
+        cost: 1000
+        location: Baani Square, Sector 50, Gurgaon
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '1922'
+        name: Culinaire
+        url: https://www.zomato.com/ncr/culinaire-greater-kailash-gk-2-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: Mon-Sun (12:30 PM to 11 PM)
+        votes: 9918
+        image: https://b.zmtcdn.com/data/pictures/2/1922/97a99fd8f1f9114d8213e05ee72da0cc.jpg
+        cuisines: Asian, Chinese, Thai, Seafood
+        ratings: '4.1'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 800
+        location: Greater Kailash 2 (GK2), New Delhi
+        currency: Rs.
+        user_rating_text: Very Good
+      - id: '308178'
+        name: Berco's
+        url: https://www.zomato.com/ncr/bercos-greater-kailash-gk-1-new-delhi?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1
+        timings: 12 Noon to 12 Midnight
+        votes: 15008
+        image: https://b.zmtcdn.com/data/pictures/5/55/4013ca11b3aa0ad89d4c2a0736564866.jpg
+        cuisines: Chinese, Thai, Asian
+        ratings: '4.2'
+        rating_color: 5BA829
+        price_range: 2
+        cost: 700
+        location: M Block Market, Greater Kailash 1 (GK1), New Delhi
+        currency: Rs.
+        user_rating_text: Very Good

@@ -1,0 +1,31 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'article/css/style.css' %}">
+</head>
+<body>
+  {%load crispy_forms_tags %}
+  <nav>
+    <a href="{% url 'Foodie:home' %}">Home</a>
+    <a href="{% url 'Foodie:member' %}">Members</a>
+    <a href="{% url 'article:all' %}">Reviews</a>
+    
+    <a href="{% url 'logout' %}?next={% url 'Foodie:home' %}">Logout</a>
+</nav>
+<img src="https://2f35da97a9ad36d49db6-4d1987fef3a36cccd5478db4931039f0.ssl.cf3.rackcdn.com/assets/media/2020/01/SocialMedia_APAC_BreakfastTrendsIndia_Blog_1000x305.jpg" alt="foodiesfeed" width="100%">
+
+<p>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Submit">
+    <input type="submit" value="Cancel" onclick="window.location.href='{% url 'article:all' %}';return false;">
+  </form>
+</p>
+
+</body>
+</html>

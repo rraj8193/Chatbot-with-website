@@ -1,0 +1,49 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'article/css/style.css' %}">
+</head>
+<body>
+    
+    <nav>
+        <a href="{% url 'Foodie:home' %}">Home</a>
+        <a href="{% url 'Foodie:member' %}">Members</a>
+        <a href="{% url 'article:all' %}">Reviews</a>
+        <a href="{% url 'logout' %}?next={% url 'Foodie:home' %}">Logout</a>
+    </nav>
+    <img style="width: 100%;" src="https://2f35da97a9ad36d49db6-4d1987fef3a36cccd5478db4931039f0.ssl.cf3.rackcdn.com/assets/media/2020/01/SocialMedia_APAC_BreakfastTrendsIndia_Blog_1000x305.jpg" alt="foodiesfeed" >
+<p>
+<h1>Reviews</h1></p>
+
+<p>{% if article_list %}
+    <ul>
+        {% for article in article_list %}
+        <li>
+            <a href="{% url 'article:article_detail' article.id %}"> {{article.title}}</a>
+            {% if article.owner == user %}
+            (<a href="{% url 'article:article_update' article.id %}">Edit</a> |
+            <a href="{% url 'article:article_delete' article.id %}">Delete</a>)
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+ {%else%}
+<p> There are no articles in the database.</p>
+{%endif%}
+</p>
+<p>
+    <a href="{% url 'article:article_create' %}">Add an Review</a> |
+{% if user.is_authenticated %}
+<a href="{% url 'logout' %}?next={% url 'Foodie:home' %}">Logout</a>
+{% else %}
+<a href="{% url 'login' %}?next={% url 'article:all' %}">Login</a>
+{% endif %}
+
+</p>
+</body>
+</html>
+
